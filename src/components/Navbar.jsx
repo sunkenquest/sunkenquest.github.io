@@ -22,12 +22,6 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {/* <img
-            src={logo}
-            alt="logo"
-            className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
-          /> */}
-
           <img
             src={logotext}
             alt="logo"
