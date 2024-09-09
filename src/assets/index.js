@@ -2,8 +2,6 @@ import bwmap from "./backgrounds/bw-map.jpg";
 import nairobi from "./backgrounds/nairobi.png";
 import whiteabstract from "./backgrounds/white-abstract.png";
 import worldmap from "./backgrounds/world-map.png";
-import mezvid from "./backgrounds/mez-vid-2.mp4";
-import mezImg from "./backgrounds/mez-img.jpg";
 
 import logo from "./logo/logo-black.png";
 import logotext from "./logo/logo-text-black.png";
@@ -43,6 +41,9 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
+import golang from "./tech/golang.png";
+import mysql from "./tech/mysql.png";
+import laravel from "./tech/laravel.png";
 import graphql from "./tech/graphql.png";
 import flutter from "./tech/flutter.png";
 import postgresql from "./tech/postgresql.png";
@@ -52,6 +53,8 @@ import coverhunt from "./company/coverhunt.png";
 import dcc from "./company/dcc.png";
 import kelhel from "./company/kelhel.png";
 import microverse from "./company/microverse.png";
+import hipe from "./company/hipe.jpeg";
+import bu from "./company/bu.png";
 
 import komikult from "./projects/komikult.png";
 import leaderboard from "./projects/leaderboard.png";
@@ -59,14 +62,17 @@ import math from "./projects/math-magicians.png";
 import movie from "./projects/movie-metro.png";
 import nyeusi from "./projects/nyeusi.png";
 import space from "./projects/space-hub.png";
+import proj1 from "./projects/proj1.png";
+import microblog from "./projects/microblog.png";
+import zap from "./projects/zap.png";
+import pos from "./projects/pos.png";
+import thesis from "./projects/thesis.png";
 
 export {
   bwmap,
   nairobi,
   whiteabstract,
   worldmap,
-  mezvid,
-  mezImg,
   logo,
   logotext,
   shaq,
@@ -80,6 +86,14 @@ export {
   container,
   securityTest,
   frontend,
+  golang,
+  mysql,
+  laravel,
+  proj1,
+  microblog,
+  zap,
+  thesis,
+  pos,
   prototyping,
   github,
   close,
@@ -117,4 +131,6 @@ export {
   dcc,
   kelhel,
   microverse,
+  hipe,
+  bu,
 };

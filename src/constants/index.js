@@ -18,6 +18,9 @@ import {
   tailwind,
   nodejs,
   git,
+  golang,
+  mysql,
+  laravel,
   figma,
   docker,
   postgresql,
@@ -30,11 +33,18 @@ import {
   movie,
   nyeusi,
   space,
+  proj1,
+  microblog,
+  zap,
+  pos,
+  thesis,
   coverhunt,
   dcc,
   kelhel,
   microverse,
   unitTest,
+  hipe,
+  bu,
 } from "../assets";
 
 export const navLinks = [
@@ -109,6 +119,22 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "Golang",
+    icon: golang,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "Laravel",
+    icon: laravel,
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -117,89 +143,74 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "postgresql",
+    name: "PostgreSQL",
     icon: postgresql,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
   {
     name: "Flutter",
     icon: flutter,
   },
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
 ];
 
 const experiences = [
   {
-    title: "Front-End Developer",
-    company_name: "Cover Hunt",
-    icon: coverhunt,
+    title: "Administrative Assistant (Intern)",
+    company_name: "Bicol University Graduate School",
+    icon: bu,
     iconBg: "#333333",
-    date: "Aug 2021 - Feb 2022",
+    date: "June 2022 - Aug 2022",
   },
   {
-    title: "Mentor (Volunteer)",
-    company_name: "Microverse",
-    icon: microverse,
+    title: "Associate Software Engineer",
+    company_name: "HiPE Japan Inc.",
+    icon: hipe,
     iconBg: "#333333",
-    date: "Mar 2022 - May 2022",
+    date: "Sep 2023 - Mar 2024",
   },
   {
-    title: "Junior Software Engineer",
-    company_name: "Kelhel",
-    icon: kelhel,
+    title: "Software Engineer",
+    company_name: "HiPE Japan Inc.",
+    icon: hipe,
     iconBg: "#333333",
-    date: "May 2022 - Oct 2022",
-  },
-  {
-    title: "Full Stack Developer",
-    company_name: "Diversity Cyber Council",
-    icon: dcc,
-    iconBg: "#333333",
-    date: "Sep 2022 - Present",
+    date: "Mar 2024 - Present",
   },
 ];
 
 const projects = [
   {
     id: "project-1",
-    name: "KomiKult",
-    description: "A comic characters list app that displays Marvel characters.",
+    name: "QuizCract",
+    description:
+      "An application that generates quizzes from text provided by the user.",
     tags: [
       {
-        name: "react",
+        name: "asp.net",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "flutter",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: komikult,
-    repo: "https://github.com/shaqdeff/KomiKult",
-    demo: "https://shaqdeff.github.io/KomiKult/",
+    image: proj1,
+    repo: "https://github.com/CEMcode404/QuizCraft",
   },
   {
     id: "project-2",
-    name: "Leaderboard",
+    name: "MicroBlog",
     description:
-      "A leaderboard list app that displays scores submitted by different players.",
+      "A platform for sharing short, concise updates, thoughts, or media, allowing users to quickly post and interact with content.",
     tags: [
       {
-        name: "react",
+        name: "Laravel",
         color: "blue-text-gradient",
       },
       {
@@ -211,14 +222,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: leaderboard,
-    repo: "https://github.com/shaqdeff/Leaderboard",
-    demo: "https://shaqdeff.github.io/Leaderboard/",
+    image: microblog,
+    repo: "https://github.com/sunkenquest/microblog-project",
   },
   {
     id: "project-3",
-    name: "Math Magicians",
-    description: "This is a single-page calculator app built with React",
+    name: "ZAP Baseline Scan",
+    description:
+      "An automated security testing tool that quickly checks a web application's security posture by scanning for common vulnerabilities without altering the site.",
     tags: [
       {
         name: "nextjs",
@@ -233,14 +244,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: math,
+    image: zap,
     repo: "https://github.com/shaqdeff/Math-Magicians",
-    demo: "https://inspiring-medovik-37d3b3.netlify.app/",
   },
   {
     id: "project-4",
-    name: "Movie Metro",
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: "POS",
+    description: `A POS system for ordering desserts and food streamlines the ordering process, allowing customers to browse menu items, customize orders, and process payments efficiently in a restaurant or bakery setting.`,
     tags: [
       {
         name: "nextjs",
@@ -255,15 +265,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: movie,
-    repo: "https://github.com/shaqdeff/Movie-Metro",
-    demo: "https://movie-metro.netlify.app/",
+    image: pos,
+    repo: "https://github.com/mikco-hipe/pos-react",
   },
   {
     id: "project-5",
-    name: "Nyeusi Fest Site",
+    name: "Face Verification",
     description:
-      "This is a demo concert website for a music festival called Nyeusi.",
+      "Face Detection using Viola-Jones and Face Recognition /Verification using Eigenface",
     tags: [
       {
         name: "nextjs",
@@ -278,9 +287,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: nyeusi,
-    repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
-    demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
+    image: thesis,
+    repo: "https://github.com/sunkenquest/face-detection",
   },
 ];
 

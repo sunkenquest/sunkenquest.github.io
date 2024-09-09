@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { shaq, mikco, bwmap, mezvid, mezImg, worldmap } from "../assets";
+import { shaq, mikco, bwmap, worldmap } from "../assets";
 
 const Hero = () => {
   return (
@@ -50,8 +50,9 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Test <br className="sm:block hidden" />
-              Test
+              Turning code into creativity. <br className="sm:block hidden" />I
+              build seamless solutions across frontend, backend, and everything
+              in between.
             </p>
           </div>
           <div
