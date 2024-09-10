@@ -52,8 +52,8 @@ const HyperText = ({
         setTrigger(false);
         clearInterval(interval);
       }
-    }, duration / (text.length * 10));
-    // Clean up interval on unmount
+    }, duration / (text.length * 20));
+
     return () => clearInterval(interval);
   }, [text, duration, trigger, animateOnLoad]);
 

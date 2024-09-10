@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { mikco, bwmap } from "../assets";
+import { bwmap } from "../assets";
 import HyperText from "./ui/HyperText";
-import { download, downloadHover, resume } from "../assets";
 
 const Hero = () => {
   return (
@@ -40,7 +39,7 @@ const Hero = () => {
             <HyperText
               text="Hi, I'm Mikco"
               duration={1000}
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
+              className={`${styles.heroHeadText} text-eerieBlack font-poppins`}
               animateOnLoad={true}
               framerProps={{
                 initial: { opacity: 0, y: -10 },
@@ -64,16 +63,6 @@ const Hero = () => {
               hover:text-eerieBlack transition duration-[0.2s] ease-in-out 
               flex items-center justify-center"
               onClick={() => window.open("", "_blank")}
-              onMouseOver={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", download);
-              }}
             >
               MY RESUME
             </button>

@@ -32,9 +32,8 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-french" : "text-eerieBlack"
-              } hover:text-taupe text-[21px] font-medium font-mova 
+              className={`${active === nav.title ? "text-french" : "text-eerieBlack"
+                } hover:text-taupe text-[21px] font-medium font-mova 
                 uppercase tracking-[3px] cursor-pointer nav-links`}
               onClick={() => setActive(nav.title)}
             >
@@ -48,8 +47,7 @@ const Navbar = () => {
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.9] absolute 
-                top-0 left-0 w-screen h-[100vh] z-10 menu ${
-                  toggle ? "menu-open" : "menu-close"
+                top-0 left-0 w-screen h-[100vh] z-10 menu ${toggle ? "menu-open" : "menu-close"
                 }`}
             >
               <div className="flex justify-end">
@@ -68,9 +66,8 @@ const Navbar = () => {
                   <li
                     id={nav.id}
                     key={nav.id}
-                    className={`${
-                      active === nav.title ? "text-french" : "text-eerieBlack"
-                    } text-[88px] font-bold font-arenq 
+                    className={`${active === nav.title ? "text-french" : "text-eerieBlack"
+                      } text-[88px] font-bold font-arenq 
                       uppercase tracking-[1px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);

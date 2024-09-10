@@ -207,7 +207,7 @@ const projects = [
       },
     ],
     image: microblog,
-    repo: "https://github.com/sunkenquest/microblog-project",
+    repo: "https://github.com/bpocrafael/microblog-project",
   },
   {
     id: "project-3",
