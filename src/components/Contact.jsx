@@ -167,7 +167,7 @@ const Contact = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-xl font-bold mb-4">Fields must not be empty</h3>
-            <p className="text-gray-700 mb-6 text-timberWolf font-medium">
+            <p className="text-black mb-6 text-timberWolf font-medium">
               Please fill in all fields before submitting the form.
             </p>
             <button
