@@ -14,6 +14,7 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +25,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!form.name || !form.email || !form.message) {
+      setShowModal(true);
+      return;
+    }
 
     emailjs
       .send(
@@ -56,6 +62,10 @@ const Contact = () => {
         }
       );
   };
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
 
   return (
     <div
@@ -147,6 +157,28 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
+      {showModal && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white p-6 rounded-lg shadow-lg text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-xl font-bold mb-4">Fields must not be empty</h3>
+            <p className="text-gray-700 mb-6 text-timberWolf font-medium">
+              Please fill in all fields before submitting the form.
+            </p>
+            <button
+              onClick={closeModal}
+              className="bg-eerieBlack text-white py-2 px-4 rounded-lg"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

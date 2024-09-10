@@ -43,8 +43,8 @@ const HyperText = ({
             l === " "
               ? l
               : i <= interations.current
-              ? text[i]
-              : alphabets[getRandomInt(26)]
+                ? text[i]
+                : alphabets[getRandomInt(26)]
           )
         );
         interations.current = interations.current + 0.1;
@@ -66,9 +66,8 @@ const HyperText = ({
         {displayText.map((letter, i) => (
           <motion.h1
             key={i}
-            className={`font-mono ${letter === " " ? "w-3" : ""} ${
-              className || ""
-            }`}
+            className={`font-mono ${letter === " " ? "w-3" : ""} ${className || ""
+              }`}
             {...framerProps}
           >
             {letter}
