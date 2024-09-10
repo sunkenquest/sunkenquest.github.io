@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { mikco, bwmap } from "../assets";
 import HyperText from "./ui/HyperText";
+import { download, downloadHover, resume } from "../assets";
 
 const Hero = () => {
   return (
@@ -37,7 +38,7 @@ const Hero = () => {
 
           <div>
             <HyperText
-              text="Hi, I'm  Mikco"
+              text="Hi, I'm Mikco"
               duration={1000}
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
               animateOnLoad={true}
@@ -53,7 +54,29 @@ const Hero = () => {
               <br className="sm:block hidden" /> frontend, backend, and
               everything in <br className="sm:block hidden" />
               between.
+              <br className="sm:block hidden" />
             </p>
+            <button
+              className="live-demo sm:text-[18px] text-[14px] text-timberWolf 
+              font-bold font-beckman py-5 pl-3 pr-3 whitespace-nowrap 
+              sm:w-[148px] sm:h-[58px] w-[125px] h-[46px] rounded-[10px] 
+              bg-jetLight sm:mt-[22px] mt-[16px] hover:bg-battleGray 
+              hover:text-eerieBlack transition duration-[0.2s] ease-in-out 
+              flex items-center justify-center"
+              onClick={() => window.open("", "_blank")}
+              onMouseOver={() => {
+                document
+                  .querySelector(".download-btn")
+                  .setAttribute("src", downloadHover);
+              }}
+              onMouseOut={() => {
+                document
+                  .querySelector(".download-btn")
+                  .setAttribute("src", download);
+              }}
+            >
+              MY RESUME
+            </button>
           </div>
           <div
             className="w-screen flex flex-col items-start 

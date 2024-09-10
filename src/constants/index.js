@@ -145,14 +145,14 @@ const technologies = [
 ];
 
 const experiences = [
-  {
-    title: "Administrative Assistant (Intern)",
-    company_name: "Bicol University Graduate School",
-    icon: bu,
+    {
+    title: "Software Engineer",
+    company_name: "HiPE Japan Inc.",
+    icon: hipe,
     iconBg: "#333333",
-    date: "June 2022 - Aug 2022",
+    date: "Mar 2024 - Present",
   },
-  {
+    {
     title: "Associate Software Engineer",
     company_name: "HiPE Japan Inc.",
     icon: hipe,
@@ -160,18 +160,18 @@ const experiences = [
     date: "Sep 2023 - Mar 2024",
   },
   {
-    title: "Software Engineer",
-    company_name: "HiPE Japan Inc.",
-    icon: hipe,
+    title: "Administrative Assistant (Intern)",
+    company_name: "Bicol University Graduate School",
+    icon: bu,
     iconBg: "#333333",
-    date: "Mar 2024 - Present",
+    date: "June 2022 - Aug 2022",
   },
 ];
 
 const projects = [
   {
     id: "project-1",
-    name: "QuizCract",
+    name: "QuizCraft",
     description:
       "An application that generates quizzes from text provided by the user.",
     tags: [
