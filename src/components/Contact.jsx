@@ -1,10 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { send, sendHover } from "../assets";
+import { send, sendHover, arrowUp } from "../assets"; // Add your arrow image to the assets
 
 const Contact = () => {
   const formRef = useRef();
@@ -15,10 +15,10 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showToTop, setShowToTop] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
 
@@ -28,6 +28,7 @@ const Contact = () => {
 
     if (!form.name || !form.email || !form.message) {
       setShowModal(true);
+      setLoading(false);
       return;
     }
 
@@ -48,7 +49,6 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm({
             name: "",
             email: "",
@@ -64,8 +64,25 @@ const Contact = () => {
   };
 
   const closeModal = () => {
-    setShowModal(false)
-  }
+    setShowModal(false);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) { // Adjust this value based on when you want the arrow to appear
+        setShowToTop(true);
+      } else {
+        setShowToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div
@@ -147,7 +164,7 @@ const Contact = () => {
               document.querySelector(".contact-btn").setAttribute("src", send);
             }}
           >
-            {loading ? "Sending" : "Send"}
+            Send
             <img
               src={send}
               alt="send"
@@ -163,11 +180,10 @@ const Contact = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg text-center"
+            className="bg-white p-6 rounded-lg shadow-lg text-center mx-4 sm:mx-6 lg:mx-8"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-xl font-bold mb-4">Fields must not be empty</h3>
-            <p className="text-black mb-6 text-timberWolf font-medium">
+            <p className="text-medium text-black font-poppins font-medium mb-4">
               Please fill in all fields before submitting the form.
             </p>
             <button
@@ -177,6 +193,18 @@ const Contact = () => {
               Close
             </button>
           </div>
+        </div>
+      )}
+      {showToTop && (
+        <div
+          className="fixed bottom-8 right-8 cursor-pointer"
+          onClick={scrollToTop}
+        >
+          <img
+            src={arrowUp}
+            alt="to top"
+            className="w-[40px] h-[40px] object-contain"
+          />
         </div>
       )}
     </div>

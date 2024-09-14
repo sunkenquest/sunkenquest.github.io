@@ -1,9 +1,7 @@
 import bwmap from "./backgrounds/bw-map.jpg";
-
+import mikco from "./personal/mikco.png"
 import logo from "./logo/logo-black.png";
 import logotext from "./logo/logo-text-black.png";
-
-import mikco from "./personal/mikco.png";
 
 import backend from "./icons/backend.png";
 import cicd from "./icons/cicd.png";
@@ -21,7 +19,7 @@ import menu from "./icons/menu.png";
 import resume from "./icons/resume.png";
 import send from "./icons/send.png";
 import sendHover from "./icons/sendHover.png";
-
+import arrowUp from "./icons/arrowUp.png"
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -51,7 +49,6 @@ export {
   bwmap,
   logo,
   logotext,
-  mikco,
   backend,
   unitTest,
   cicd,
@@ -60,6 +57,7 @@ export {
   container,
   securityTest,
   frontend,
+  mikco,
   golang,
   mysql,
   laravel,
@@ -76,6 +74,7 @@ export {
   resume,
   send,
   sendHover,
+  arrowUp,
   css,
   docker,
   flutter,
