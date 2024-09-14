@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import PropTypes from "prop-types"; // Import PropTypes for type checking
 import React from "react";
 
-const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 

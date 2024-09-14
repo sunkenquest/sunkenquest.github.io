@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { bwmap } from "../assets";
+import HyperText from "./ui/HyperText";
 
 const Hero = () => {
   return (
@@ -29,6 +30,19 @@ const Hero = () => {
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}
         >
+          <div>
+            <HyperText
+              text="welcome :)"
+              duration={1000}
+              className={`${styles.heroHeadText} text-eerieBlack font-poppins relative z-10 pointer-events-none`}
+              animateOnLoad={true}
+              framerProps={{
+                initial: { opacity: 0, y: -10 },
+                animate: { opacity: 1, y: 0 },
+                exit: { opacity: 0, y: 3 },
+              }}
+            />
+          </div>
           <div
             className="w-screen flex flex-col items-start 
             justify-center sm:-ml-[3rem] xxs:mt-4"
@@ -58,17 +72,6 @@ const Hero = () => {
                 }}
                 className="w-3 h-3 rounded-full bg-taupe mb-1"
               />
-              {/* <button
-                className="live-demo sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman py-5 pl-3 pr-3 whitespace-nowrap 
-              sm:w-[148px] sm:h-[58px] w-[125px] h-[46px] rounded-[10px] 
-              bg-jetLight sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] ease-in-out 
-              flex items-center justify-center"
-                onClick={() => window.open("", "_blank")}
-              >
-                MY RESUME
-              </button> */}
             </div>
           </a>
         </div>
