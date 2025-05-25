@@ -38,6 +38,7 @@ import postgresql from "./tech/postgresql.png";
 import bootstrap from "./tech/bootstrap.png";
 import hipe from "./company/hipe.jpeg";
 import bu from "./company/bu.png";
+import oona from "./company/oona.png";
 
 import proj1 from "./projects/proj1.png";
 import microblog from "./projects/microblog.png";
@@ -90,4 +91,5 @@ export {
   typescript,
   hipe,
   bu,
+  oona
 };

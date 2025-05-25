@@ -29,6 +29,7 @@ import {
   unitTest,
   hipe,
   bu,
+  oona,
 } from "../assets";
 
 export const navLinks = [
@@ -145,12 +146,19 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "FullStack Application Developer",
+    company_name: "Oona Insular Insurance Company",
+    icon: oona,
+    iconBg: "#333333",
+    date: "April 2025 - Present",
+  },
     {
     title: "Software Engineer",
     company_name: "HiPE Japan Inc.",
     icon: hipe,
     iconBg: "#333333",
-    date: "Mar 2024 - Present",
+    date: "Mar 2024 - April 2025",
   },
     {
     title: "Associate Software Engineer",
